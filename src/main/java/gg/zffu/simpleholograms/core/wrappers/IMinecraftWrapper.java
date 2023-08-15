@@ -9,6 +9,4 @@ public interface IMinecraftWrapper {
     Object makeSpawnPacket(Object entity);
     Object makeDespawnPacket(int entityId);
 
-
-
 }
