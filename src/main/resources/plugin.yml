@@ -1,0 +1,7 @@
+name: SimpleHolograms
+version: '${project.version}'
+main: gg.zffu.simpleholograms.plugin.SimpleHologramPlugin
+api-version: 1.20
+prefix: SimpleHolograms
+authors: [ Zffu ]
+description: SimpleHolorams is a simple way to make great holograms with the plugin or the api. 
