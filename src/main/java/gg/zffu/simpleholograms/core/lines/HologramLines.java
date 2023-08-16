@@ -3,10 +3,11 @@ package gg.zffu.simpleholograms.core.lines;
 import gg.zffu.simpleholograms.core.holograms.Hologram;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HologramLines {
 
-    private ArrayList<String> lines = new ArrayList<>();
+    private List<Object> lines = new ArrayList<>();
 
     // For Updating
     private Hologram hologram;
@@ -15,8 +16,12 @@ public class HologramLines {
         this.hologram = hologram;
     }
 
-    public void addLine(String line) {
+    public void addLine(Object line) {
         this.lines.add(line);
+    }
+
+    public List<Object> getLines() {
+        return lines;
     }
 
 
