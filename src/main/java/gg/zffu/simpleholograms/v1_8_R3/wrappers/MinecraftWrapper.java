@@ -2,7 +2,9 @@ package gg.zffu.simpleholograms.v1_8_R3.wrappers;
 
 import gg.zffu.simpleholograms.core.wrappers.IMinecraftWrapper;
 import net.minecraft.server.v1_8_R3.*;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 public class MinecraftWrapper implements IMinecraftWrapper {
@@ -23,5 +25,10 @@ public class MinecraftWrapper implements IMinecraftWrapper {
     public Object makeDespawnPacket(int entityId) {
         PacketPlayOutEntityDestroy packetPlayOutEntityDestroy = new PacketPlayOutEntityDestroy(entityId);
         return packetPlayOutEntityDestroy;
+    }
+
+    @Override
+    public Object convertAsNMSEntity(Entity entity) {
+        return ((CraftEntity)entity).getHandle();
     }
 }
